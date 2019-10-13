@@ -16,7 +16,11 @@ import { Bai4productComponent } from './bai4product/bai4product.component';
 import { TrangchuComponent } from './trangchu/trangchu.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter'
 import { FormsModule } from '@angular/forms';
-import { Lap05Component } from './lap05/lap05.component'
+import { Lap05Component } from './lap05/lap05.component';
+import { HttpClientModule} from '@angular/common/http';
+import { Lap06Component } from './lap06/lap06.component';
+import { Detaillap06Component } from './detaillap06/detaillap06.component';
+import { NavHeaderLap06Component } from './nav-header-lap06/nav-header-lap06.component';
 
 @NgModule({
   declarations: [
@@ -32,9 +36,14 @@ import { Lap05Component } from './lap05/lap05.component'
     Bai4productComponent,
     TrangchuComponent,
     Lap05Component,
+    AppComponent,
+    Lap06Component,
+    Detaillap06Component,
+    NavHeaderLap06Component,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     Ng2SearchPipeModule,
     FormsModule,

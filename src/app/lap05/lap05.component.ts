@@ -91,6 +91,7 @@ export class Lap05Component implements OnInit {
       grade:'A'},
   
   ];
+  
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
