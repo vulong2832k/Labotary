@@ -21,6 +21,7 @@ import { HttpClientModule} from '@angular/common/http';
 import { Lap06Component } from './lap06/lap06.component';
 import { Detaillap06Component } from './detaillap06/detaillap06.component';
 import { NavHeaderLap06Component } from './nav-header-lap06/nav-header-lap06.component';
+import { Lap07Component } from './lap07/lap07.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { NavHeaderLap06Component } from './nav-header-lap06/nav-header-lap06.com
     Lap06Component,
     Detaillap06Component,
     NavHeaderLap06Component,
+    Lap07Component,
   ],
   imports: [
     BrowserModule,

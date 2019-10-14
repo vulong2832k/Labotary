@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="jumbotron-fluid text-center">
+        <h1><b>Thêm Sinh Viên</b></h1>
+    </div>
+</div>
+<div class="container">
+    <form action="" class="form-inline">
+        <label for="filter" ng-model="searchText" class="col-2" margin ><b>Họ Và Tên:</b></label>
+        <input type="text" class="col-10" name="filter" id="filter" placeholder="Họ Và Tên">
+    </form>
+    <form action="" class="form-inline">
+        <label for="filter" ng-model="searchText" class="col-2"><b>Ngày Sinh:</b></label>
+        <input type="datetime" class="col-10" name="filter" id="filter" placeholder="mm/dd/yyyy">
+    </form>
+    <form action="" class="form-inline">
+        <label for="filter" ng-model="searchText" class="col-2"><b>Điểm:</b></label>
+        <input type="number" class="col-10" name="filter" id="filter" placeholder="Điểm?">
+    </form>
+    <div class="button-group" *ngIf="isAdd">
+        <button type="button" class="btn btn-primary btn-block" (click)="onAdd()" style="margin-top: 20px;">Thêm</button>
+        <button type="button" class="btn btn-danger btn-block" (click)="onCancel()" style="margin-top: 20px;">Hủy</button>
+    </div>
+    <div class="button-group" *ngIf="isEdit">
+            <button type="button" class="btn btn-primary btn-block" (click)="onSave()" style="margin-top: 20px;">Lưu</button>
+            <button type="button" class="btn btn-danger btn-block" (click)="onCancel()" style="margin-top: 20px;">Hủy</button>
+    </div>
+</div>
+<div class="container" style="margin-top: 30px;">
+    <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Họ Và Tên</th>
+            <th>Ngày Sinh</th>
+            <th>Điểm</th>
+            <th>Xếp Loại</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody *ngFor='let student of students'>
+          <tr>
+            <td>{{ student.id }}</td>
+            <td>{{ student.fullName }}</td>
+            <td>{{ student.birthday }}</td>
+            <td>{{ student.mark }}</td>
+            <td>{{ gradeStudent(student) }}</td>
+            <td>
+                <button type="button" class="btn btn-primary" (click)="onEdit()">Sửa</button>
+                <button type="button" class="btn btn-danger" (click)="onDelete(students.id)" style="margin-left:10px;">Xóa</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary" *ngIf="!isAdd" (click)="add()">Add</button>
+    </div>
