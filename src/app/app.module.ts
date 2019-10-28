@@ -22,6 +22,10 @@ import { Lap06Component } from './lap06/lap06.component';
 import { Detaillap06Component } from './detaillap06/detaillap06.component';
 import { NavHeaderLap06Component } from './nav-header-lap06/nav-header-lap06.component';
 import { Lap07Component } from './lap07/lap07.component';
+import { Lap08Component } from './lap08/lap08.component';
+import { Detaillap08Component } from './detaillap08/detaillap08.component';
+import { Checkoutlap08Component } from './Checkoutlap08/Checkoutlap08.component';
+import { Cartlap08Component } from './cartlap08/cartlap08.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,10 @@ import { Lap07Component } from './lap07/lap07.component';
     Detaillap06Component,
     NavHeaderLap06Component,
     Lap07Component,
+    Lap08Component,
+    Detaillap08Component,
+    Checkoutlap08Component,
+    Cartlap08Component,
   ],
   imports: [
     BrowserModule,
